@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
@@ -24,7 +24,7 @@ export const FormWrap = styled.div`
     justify-content: center;
 
     @media screen and (max-width: 400px){
-        height: 80%;
+        height: 20%;
     }
 `;
 
@@ -44,11 +44,11 @@ export const Icon = styled(Link)`
 
 
 export const FormContent = styled.div`
-    display: ${({isEnabled}) => ((isEnabled) ? 'flex' : 'none')};
+    display: flex;
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    
+
     @media screen and (max-width: 480px){
         padding: 10px;
     }
@@ -57,7 +57,7 @@ export const FormContent = styled.div`
 export const Form = styled.form`
     display: ${({isSubmitted}) => ((isSubmitted) ? 'none' : 'grid')};
     background: #fff;
-    max-width: 380px;
+    max-width: 400px;
     height: auto;
     width: 100%;
     z-index: 1;
@@ -67,11 +67,12 @@ export const Form = styled.form`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
     @media screen and (max-width: 400px){
+        height: 20%;
         padding: 32px 32px;
     }
 `;
 
-export const FormSecondary = styled.div`
+export const FormSecondary = styled.form`
     display: ${({isSubmitted}) => ((isSubmitted) ? 'grid' : 'none')};
     background: #fff;
     max-width: 450px;
@@ -84,6 +85,7 @@ export const FormSecondary = styled.div`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
     @media screen and (max-width: 400px){
+        height: 20%;
         padding: 32px 32px;
     }
 `;
@@ -129,15 +131,6 @@ export const FormInput = styled.input`
     border-radius: 4px;
 `;
 
-export const FormFile = styled.input`
-    padding: 16px 16px;
-    margin-bottom: 32px;
-    border: solid #000;
-    border-radius: 4px;
-    display: inline-block;
-    cursor: pointer;
-`
-
 export const FormButton = styled.button`
     background: #1C50D3;
     padding: 16px 0;
@@ -159,7 +152,7 @@ export const Text = styled.span`
     margin-top: 24px;
     color: #000;
     font-size: 14px;
-`
+`;
 
 export const TextP = styled.p`
     text-align: center;
@@ -173,42 +166,31 @@ export const TextP = styled.p`
     }
 `
 
-export const TextHref = styled.a`
+export const TextH1 = styled.h1`
+    margin-bottom: 40px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
     text-align: center;
-    margin-top: 24px;
-    font-size: 14px;
-    overflow-wrap: break-word;
-    text-decoration: none;
-    max-width: 380px;
-    @media screen and (max-width: 400px){
-        max-width: 325px;
-    }
+`;
 
-`
+export const TextH2 = styled.h2`
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+`;
 
-export const PopUpWrapper = styled.div`
-    display: ${({isEnabled}) => (isEnabled ? 'none' : 'flex')};  
-    height: 100%;
+export const ImgWrap = styled.div`
+    display: flex;
     flex-direction: column;
     justify-content: center;
-`
-
-export const PopUpCard = styled.div`
-    opacity: ${({isEnabled}) => (isEnabled ? '0%' : '100%')};
-    background: #fff;
-    max-width: 500px;
-    max-height: 300px;
-    height: auto;
-    width: 100%;
-    z-index: 0;
-    display: grid;
+    max-width: 555px;
     margin: 0 auto;
-    padding: 32px 32px;
-    border-radius: 4px;
+    padding: 35px 0 0 0;
+`;
 
-    @media screen and (max-width: 400px){
-        padding: 16px 16px;
-    }
-`
-
-
+export const Img = styled.img`
+    width: 100%;
+`;

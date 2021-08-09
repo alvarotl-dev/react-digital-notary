@@ -1,6 +1,7 @@
 import svg1 from '../../images/metamask.svg'
 import svg2 from '../../images/svg-2.svg'
 import svg3 from '../../images/svg-3.svg'
+import svg4 from '../../images/svg-4.svg'
 
 export const homeObjOne = {
     id: 'install',
@@ -39,8 +40,8 @@ export const homeObjTwo = {
 
 export const homeObjThree = {
     id: 'wallet',
-    lightBg: true,
-    lightText: false,
+    lightBg: false,
+    lightText: true,
     lightTextDesc: true,
     topLine: 'Create your own',
     headline: 'Get your own wallet',
@@ -50,7 +51,25 @@ export const homeObjThree = {
     img: svg3,
     alt: 'False',
     dark: true,
+    primary: false,
+    darkText: false,
+    page:"/generate-wallet"
+};
+
+export const homeObjFour = {
+    id: 'explore',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'Explore Documents',
+    headline: 'See your documents in the Blockchain',
+    description: "Whenever you need your documents, come and get them from the Blockchain thanks to IPFS.",
+    buttonLabel: 'Explore',
+    imgStart: true,
+    img: svg4,
+    alt: 'False',
+    dark: true,
     primary: true,
     darkText: true,
-    page:"/generate-wallet"
+    page:"/explore"
 };

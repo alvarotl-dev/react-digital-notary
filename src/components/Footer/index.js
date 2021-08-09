@@ -9,9 +9,8 @@ const Footer = () => {
         scroll.scrollToTop();
     }
 
-    return (
-        <FooterContainer>
-            <FooterWrap>
+
+    /*
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
@@ -52,7 +51,12 @@ const Footer = () => {
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
+        */
 
+    return (
+        <FooterContainer>
+            <FooterWrap>
+                
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/" onClick={toggleHome}>
@@ -62,14 +66,11 @@ const Footer = () => {
                         </WebsiteRights>
 
                         <SocialIcons>
-                            <SocialIconLink href="/" target="_blank" aria-label="LinkedIn">
+                            <SocialIconLink href="//www.linkedin.com/in/alvarotldev/" target="_blank" aria-label="LinkedIn">
                                 <FaLinkedin/>
                             </SocialIconLink>
                             <SocialIconLink href="//www.twitter.com/alvarotl_" target="_blank" aria-label="Twitter">
                                 <FaTwitter/>
-                            </SocialIconLink>
-                            <SocialIconLink href="/" target="_blank" aria-label="Instagram">
-                                <FaInstagram/>
                             </SocialIconLink>
                         </SocialIcons>
                     </SocialMediaWrap>

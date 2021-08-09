@@ -7,7 +7,6 @@ import { animateScroll as scroll } from 'react-scroll';
 const Navbar = ({isOpen, toggle}) => {
 
     const [scrollNav, setScrollNav] = useState(false);
-    //const [mainPage, setMainPage] = useState(false);
 
     const changeNav = () => {
         if(window.scrollY >= 80){
@@ -18,18 +17,8 @@ const Navbar = ({isOpen, toggle}) => {
         }
     };
 
-   //const isMainPage = () => {
-   //    if(window.location.pathname=='/'){
-   //        setMainPage(true);
-   //    }
-   //    else{
-   //        setMainPage(false);
-   //    }
-   //}
-
     useEffect(()=> {
         window.addEventListener('scroll', changeNav);
-        //window.addEventListener('', isMainPage)
     }, []);
 
     const toggleHome = () => {
@@ -53,14 +42,17 @@ const Navbar = ({isOpen, toggle}) => {
                             <NavLinks to='upload' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Upload</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='services' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Features</NavLinks>
+                            <NavLinks to='wallet' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Wallet</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to='wallet' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Wallet</NavLinks>
+                            <NavLinks to='explore' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Explore</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to='services' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Features</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavButton>
-                        <NavButtonLink to="/signin">Upload</NavButtonLink>
+                        <NavButtonLink to="/upload">Upload Now</NavButtonLink>
                     </NavButton>
                     
                 </NavbarContainer>

@@ -1,16 +1,15 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import InfoSection from '../components/InfoSection'
-import { homeObjThree } from '../components/InfoSection/Data'
-import Signin from '../components/Signin'
 import UploadDoc from '../components/UploadDocument'
 import ScrollToTop from '../components/ScrollToTop'
+import { ethEnabled } from '../eth-files/web3'
 
 const UploadPage = () => {
+    const metamaskEnabled = ethEnabled(window);
+
     return (
         <div>
             <ScrollToTop/>
-            <UploadDoc/>
+            <UploadDoc isEnabled={metamaskEnabled}/>
         </div>
     )
 }

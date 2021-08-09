@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import InfoSection from '../components/InfoSection';
-import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data';
+import { homeObjOne, homeObjThree, homeObjTwo, homeObjFour } from '../components/InfoSection/Data';
 import MetamaskSection from '../components/InfoSection/MetamaskSection';
 import RouteSection from '../components/InfoSection/RouteSection';
 import Navbar from '../components/Navbar';
@@ -26,8 +25,10 @@ const Home = () => {
           <HeroSection />
           <MetamaskSection {...homeObjOne}/>
           <RouteSection {...homeObjTwo}/>
-          <Services id={'services'}/>
           <RouteSection {...homeObjThree}/>
+          <RouteSection {...homeObjFour}/>
+          <Services id={'services'}/>
+          
           <Footer/>
         </>
     );

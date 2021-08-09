@@ -1,16 +1,15 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import InfoSection from '../components/InfoSection'
-import { homeObjThree } from '../components/InfoSection/Data'
-import Signin from '../components/Signin'
-import ScrollToTop from '../components/ScrollToTop'
+import React from 'react';
+import ScrollToTop from '../components/ScrollToTop';
+import WalletGenPage from '../components/WalletGeneration';
+import { ethEnabled } from '../eth-files/web3';
 
 const GenerateWalletPage = () => {
+
     return (
-        <div>
+        <>
             <ScrollToTop/>
-            <Signin/>
-        </div>
+            <WalletGenPage/>
+        </>
     )
 }
 
