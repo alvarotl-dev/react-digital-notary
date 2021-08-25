@@ -34,3 +34,23 @@ contract StoreDocument{
         _;
     }
 }
+
+
+/*
+
+****ACTUAL CONTRACT*****
+
+pragma solidity ^0.4.24;
+
+contract StoreDocument{
+    
+    event RegisterHash(address indexed owner, string _hash );
+
+    //Event Emitter
+    function registerHash(string rHash) public {
+        emit RegisterHash(msg.sender, rHash);
+    }
+
+}
+
+*/
