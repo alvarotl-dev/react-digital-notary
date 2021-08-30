@@ -1,8 +1,25 @@
 pragma solidity ^0.4.24;
 
 //Needs to be deployed on rinkeby with remix
-//Rinkeby Address 0x29A3307b3e1961AAB2C787bB81862b8212a36F97
+//Rinkeby Address 0x07FBac5868221462A45A0D1a7905213Ca086A5bd
 
+
+contract StoreDocument{
+    
+    event RegisterHash(address indexed owner, string _hash );
+
+    //Event Emitter
+    function registerHash(string rHash) public {
+        emit RegisterHash(msg.sender, rHash);
+    }
+
+}
+
+
+
+/*
+
+****OLD CONTRACT*****
 
 contract StoreDocument{
 
@@ -33,24 +50,6 @@ contract StoreDocument{
         require(msg.sender == contractOwner);
         _;
     }
-}
-
-
-/*
-
-****ACTUAL CONTRACT*****
-
-pragma solidity ^0.4.24;
-
-contract StoreDocument{
-    
-    event RegisterHash(address indexed owner, string _hash );
-
-    //Event Emitter
-    function registerHash(string rHash) public {
-        emit RegisterHash(msg.sender, rHash);
-    }
-
 }
 
 */

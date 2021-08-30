@@ -27,11 +27,13 @@ const Home = () => {
           <RouteSection {...homeObjTwo}/>
           <RouteSection {...homeObjThree}/>
           <RouteSection {...homeObjFour}/>
-          <Services id={'services'}/>
+          
           
           <Footer/>
         </>
     );
 };
+
+// Services removed from bottom for style. <Services id={'services'}/>
 
 export default Home;

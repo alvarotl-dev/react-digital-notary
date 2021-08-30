@@ -47,9 +47,7 @@ const Navbar = ({isOpen, toggle}) => {
                         <NavItem>
                             <NavLinks to='explore' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Explore</NavLinks>
                         </NavItem>
-                        <NavItem>
-                            <NavLinks to='services' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Features</NavLinks>
-                        </NavItem>
+                        
                     </NavMenu>
                     <NavButton>
                         <NavButtonLink to="/upload">Upload Now</NavButtonLink>
@@ -61,5 +59,14 @@ const Navbar = ({isOpen, toggle}) => {
         </>
     );
 };
+
+/* 
+
+Removed for style.
+
+<NavItem>
+    <NavLinks to='services' smooth={true} duration={500} spy={true} exact={true} offset={-79}>Features</NavLinks>
+</NavItem> 
+*/
 
 export default Navbar

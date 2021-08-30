@@ -14,7 +14,7 @@ const Sidebar = ({isOpen, toggle}) => {
                     <SidebarLink to="upload" onClick={toggle}>Upload</SidebarLink>
                     <SidebarLink to="wallet" onClick={toggle}>Wallet</SidebarLink>
                     <SidebarLink to="explore" onClick={toggle}>Explore</SidebarLink>
-                    <SidebarLink to="services" onClick={toggle}>Features</SidebarLink>
+                    
                 </SidebarMenu>
 
                 <SideButtonWrap>
@@ -26,5 +26,6 @@ const Sidebar = ({isOpen, toggle}) => {
 
     )
 }
+//Removed for style. <SidebarLink to="services" onClick={toggle}>Features</SidebarLink>
 
 export default Sidebar
